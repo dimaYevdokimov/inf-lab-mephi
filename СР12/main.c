@@ -23,9 +23,8 @@ int main() {
 			}
 			if(k>=r) {
 				r=k;
-				for(j=0;j<i;j++){if(mw[j]!=cw[j]){g=1;};};
+				for(j=0;j<i;j++){if(mw[j]!=cw[j]){g=1;};mw[j]=cw[j];};
 				if(g==0){if(l[li-1]!=ln){l[li]=ln;li++;};}else{l[0]=ln;li=1;};
-				for(j=0;j<i;j++){mw[j]=cw[j];};
 			}
 		} while((c!='\n')&&(c!=EOF));
 	} while(c!=EOF);
