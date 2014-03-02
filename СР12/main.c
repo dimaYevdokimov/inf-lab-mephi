@@ -2,13 +2,9 @@
 
 int main() {
 	int i,j,k=0,f=0,g=0;
-	char mw[8]; char cw[8];
-	int l[30];
-	int li=0;
-	int ln=0;
-	int r=0;
+	char mw[8],cw[8],c;
+	int l[30],li=0,ln=0,r=0;
 	for(i=0;i<8;i++){mw[i]=0;cw[i]=1;}
-	char c;
 	FILE *fin = fopen("input.txt","r+");
 	printf("\n");
 	do {
