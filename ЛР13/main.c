@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <time.h>
 
+int* f2(int* m,int size,int a);
+
 int r() {
   return rand()%26+5;
 }
@@ -17,21 +19,24 @@ void f1(int* m, int size, int i) {
   m[size-1]=b;
 }
 
-void f2(int *m,int *n,int a) {
-  n[0]=a;
-  for(int i=0;i<10;i++) n[i+1]=m[i];
+int* f2(int* m,int size,int a) {
+  int* buf;
+  buf = (int*) malloc(sizeof(int)*(size+1));
+  buf[0]=a;
+  for(int i=0;i<10;i++) buf[i+1]=m[i];
+  return buf;
 }
 
 int main() {
   int m[10]; int b;
-  int n[11];
+  int* n;
   srand(time(NULL));
   printm(m,10,1);
   printf("Какой элемент поменять с последним? "); scanf("%d",&b);
   f1(m,10,b);
   printm(m,10,0);
   printf("Какое число вставить первым? "); scanf("%d",&b);
-  f2(m,n,b);
+  n = f2(m,10,b);
   printm(n,11,0);
   return 0;
 }
