@@ -48,6 +48,7 @@ void q(int* a,int s,int n,int fi,int la) {
 
 int main() {
   int n1,n2,n3;
+  int y1,y2,y3;
   int* m1;
   int* m2;
   int* m3;
@@ -70,12 +71,22 @@ int main() {
   printf("\n\nПервый массив отсортирован:\n");
   printArray(m1,n1,1);
   printf("\n\nПроизводится сортировка второго массива:\n");
-  y=0; q(m2,n2,2,0,n2-1);
+  y1=y;
+  y=0; q(m2,n2,2,0,n2-1); 
   printf("\n\nВторой массив отсортирован:\n");
   printArray(m2,n2,2);
+  y2=y;
   y=0; q(m3,n3,3,0,n3-1);
   printf("\n\nТретий массив отсортирован:\n");
   printArray(m3,n3,3);
+  y3=y;
+  
+  printf("Сравнение теоретической и практической сложностей:\n");
+  printf("Теор.\t\t |\t\tПракт.\n");
+  printf("n\tt(n)\t | \tn\tt(n)\n");
+  printf("%d\t%d\t | \t%d\t%d\n",n1,0,n1,y1);
+  printf("%d\t%d\t | \t%d\t%d\n",n2,0,n2,y2);
+  printf("%d\t%d\t | \t%d\t%d\n",n3,0,n3,y3);
   printf("\n");
   return 0;
 }

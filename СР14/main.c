@@ -176,6 +176,7 @@ int main() {
   printArray(ra,5);
   sort2(rb,5);
   printf("После сортировки B: \n");
-  printArray(ra,5);  
+  printArray(ra,5);
+ 
   return 0;
 }
