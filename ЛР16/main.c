@@ -1,5 +1,4 @@
 #include <stdio.h>
-int fuck=100;
 
 int main() { 
   int* a;
